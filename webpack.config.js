@@ -6,11 +6,6 @@ var webpack = require('webpack');
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 var BeepPlugin = require('webpack-beep-plugin');
 
-var definePlugin = new webpack.DefinePlugin({
-    PRODUCTION: process.env.NODE_ENV === 'production'
-});
-
-
 var commonsChunkPlugin = new CommonsChunkPlugin({
     name: "vendor",
     filename: 'vendor.js',
@@ -41,7 +36,6 @@ module.exports = {
     },
     plugins: [
         new RewirePlugin(),
-        definePlugin,
         sourceMap,
         commonsChunkPlugin,
         new BeepPlugin()
