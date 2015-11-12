@@ -5,10 +5,5 @@ module.exports = {
     output: {
         filename: 'entry.out.js'
     },
-    module: {
-        loaders: [
-            { test: /\.js$/, loader: 'babel-loader' }
-        ]
-    },
     plugins: [new RewirePlugin()]
 };
