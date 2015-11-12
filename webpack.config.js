@@ -1,5 +1,4 @@
 var RewirePlugin = require("rewire-webpack");
-var webpack = require('webpack');
 
 module.exports = {
     entry: './entry.js',
@@ -11,7 +10,5 @@ module.exports = {
             { test: /\.js$/, loader: 'babel-loader' }
         ]
     },
-    plugins: [
-        new RewirePlugin()
-    ]
+    plugins: [new RewirePlugin()]
 };
